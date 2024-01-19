@@ -1,13 +1,27 @@
 package SumOfArray;
 
+import java.util.Scanner;
+
 public class SumOfArray {
 
   public static void main(String[] args) {
-    int[] numbers = { 5, 10, 15, 20, 25 };
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("How many number will you add? : ");
+    int n = scanner.nextInt();
+
+    int[] numbers = new int[n];
+
+    for (int i = 0; i < n; i++) {
+      System.out.print("Enter a number: ");
+      numbers[i] = scanner.nextInt();
+    }
 
     int sum = Sum(numbers);
 
-    System.out.println("Sum of Elements in Array: " + sum);
+    System.out.println("Sum of elements in Array: " + sum);
+
+    scanner.close();
   }
 
   public static int Sum(int[] array) {
